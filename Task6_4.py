@@ -1,5 +1,3 @@
-import string
-from collections import OrderedDict
 """
 Create hierarchy out of birds. 
 Implement 4 classes:
