@@ -47,7 +47,7 @@ class FlyingBird(Bird):
         return super().__str__() + ' and eat'
 
 
-class NonFlyingBird:
+class NonFlyingBird(Bird):
     """ class `NonFlyingBird` with same characteristics but which obviously without attribute `fly`.
         Add same "eat" method but with other implementation regarding the swimming bird tastes.
     """
@@ -56,14 +56,14 @@ class NonFlyingBird:
         self.name = name
         self.ration = ration
 
-    def walk(self):
-        print(self.name + ' bird can walk')
-
     def eat(self):
         print('NonFlyingBird eats mostly ' + self.ration)
 
     def swim(self):
         print(self.name + ' bird can swim')
+
+    def fly(self):
+        print(f'AttributeError: "{self.name}" object has no attribute "fly"')
 
     def __str__(self):
         return f'{self.name} bird can walk, swim and eat'
@@ -84,7 +84,7 @@ if __name__ == '__main__':
 
     p = NonFlyingBird('Penguin', 'fish')
     p.swim()
-    #p.fly()
+    p.fly()
     p.eat()
     print(p)
 

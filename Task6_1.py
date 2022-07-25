@@ -6,15 +6,9 @@ class Counter:
         Implement to methods: "increment" and "get"
     """
 
-    def __init__(self, start=None, stop=None):
-        if start is not None:
-            self.start = start
-        else:
-            self.start = 0
-        if stop is not None:
-            self.stop = stop
-        else:
-            self.stop = float('inf')
+    def __init__(self, start=0, stop=float('inf')):
+        self.start = start
+        self.stop = stop
 
     def increment(self):
         if self.start < self.stop:
