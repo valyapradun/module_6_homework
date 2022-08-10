@@ -53,7 +53,7 @@ class NonFlyingBird(Bird):
     """
 
     def __init__(self, name, ration='fish'):
-        self.name = name
+        super().__init__(name)
         self.ration = ration
 
     def eat(self):
@@ -63,6 +63,7 @@ class NonFlyingBird(Bird):
         print(self.name + ' bird can swim')
 
     def fly(self):
+        #raise NotImplementedError
         print(f'AttributeError: "{self.name}" object has no attribute "fly"')
 
     def __str__(self):
